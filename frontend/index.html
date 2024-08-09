@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Filmogreb</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Filmogreb</h1>
+      <form method="post" id="movie-form">
+        <div class="form-container">
+          <label for="title">Naslov *</label>
+          <input type="text" id="title" required />
+        </div>
+        <div class="form-container">
+          <label for="title">Rezolucija</label>
+          <select name="" id="">
+            <option value="" selected>-</option>
+            <option value="">1080px</option>
+            <option value="">720px</option>
+            <option value="">320px</option>
+          </select>
+        </div>
+        <div class="form-container">
+          <label for="title">Sezona</label>
+          <input type="number" name="" id="" />
+        </div>
+        <div class="form-container">
+          <button type="submit">Potvrdi</button>
+        </div>
+        <p>* - obavezno polje</p>
+      </form>
+      <p id="response">Odgovor</p>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
