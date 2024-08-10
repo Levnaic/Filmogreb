@@ -25,7 +25,7 @@ document.getElementById("movie-form").addEventListener("submit", function (e) {
     .then((response) => response.json())
     .then((data) => {
       document.getElementById("response").innerText = data.message;
-      document.getElementById("titleInput").value = ""; // Clear the input field
+      document.getElementById("title").value = ""; // Clear the input field
     })
     .catch((error) => console.error("Error:", error));
 });

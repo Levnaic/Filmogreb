@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 
 app = Flask(__name__)
@@ -6,12 +6,12 @@ CORS(app)
 
 @app.route('/')
 def home():
-    return "Flask server is running!"
+    return send_from_directory('static', 'index.html')
 
 @app.route('/submit', methods=['POST'])
 def submit():
     # checks if type is json
-    if request.content_type != 'aplication/json':
+    if request.content_type != 'application/json':
         return jsonify({"error": "Content-Type must be application/json"}), 415
 
     data = request.json
