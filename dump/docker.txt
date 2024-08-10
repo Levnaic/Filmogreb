@@ -1,0 +1,3 @@
+docker build -t levnaic-filmogreb-web-app:0.0.1.RELEASE .
+
+docker run -d -p 5000:5000 --name filmogreb-web-app levnaic-filmogreb-web-app:0.0.1.RELEASE

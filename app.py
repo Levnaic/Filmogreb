@@ -12,11 +12,11 @@ def home():
 def submit():
     # checks if type is json
     if request.content_type != 'application/json':
-        return jsonify({"error": "Content-Type must be application/json"}), 415
+        return jsonify({"error": "Tip sadržaja mora biti: application/json"}), 415
 
     data = request.json
     movie_title = data.get('title')
-    return jsonify({"message": f"Received title: {movie_title}"})
+    return jsonify({"message": f"Primljen naslov: {movie_title}"})
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
