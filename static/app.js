@@ -1,6 +1,6 @@
 // ee
 function ee() {
-  document.body.style.backgroundImage = "url('./img/ee.jpg')";
+  document.body.style.backgroundImage = "url('/static/img/ee.jpg')";
 
   setTimeout(() => {
     document.body.style.backgroundImage = "";
